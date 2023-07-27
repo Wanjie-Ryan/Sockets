@@ -1,9 +1,18 @@
 import React from 'react'
+import io from 'socket.io-client'
+const socket = io.connect('http://localhost:3002')
+// connect the socket-io to the server in the backend
 
 
 
 
 function Io() {
+
+
+    const sendMessage = ()=>{
+
+
+    }
 
 
   return (
@@ -16,7 +25,7 @@ function Io() {
 
          <input type='text' placeholder ='Enter your message'/>
 
-         <button>Send Message</button>
+         <button onClick ={sendMessage}>Send Message</button>
 
 
 
