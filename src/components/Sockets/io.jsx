@@ -12,6 +12,8 @@ function Io() {
     // flow goes sth like this, emit a message to the backend, then, the backend receives the message, the backend then sends the received message to the frontend to be dipslayed to the user
 
     const [message, setMessage] = useState('')
+    const [messageReceived, setmessageReceived] =useState('')
+
 
     // we want to capture whatever the user types in the box and send it to the backend and back to the frontend
 
@@ -34,7 +36,9 @@ function Io() {
 
             // console.log(data)
 
-            alert(data.message)
+            // alert(data.message)
+
+            setmessageReceived(data.message)
 
 
         })
@@ -55,6 +59,8 @@ function Io() {
          <input type='text' onChange ={handleMessage} placeholder ='Enter your message'/>
 
          <button onClick ={sendMessage}>Send Message</button>
+         <h1>Message received: {messageReceived}</h1>
+
 
 
 
