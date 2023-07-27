@@ -11,8 +11,16 @@ function Io() {
 
     <>
 
+        <div className="input">
 
-    
+
+         <input type='text' placeholder ='Enter your message'/>
+
+         <button>Send Message</button>
+
+
+
+        </div>
     
     
     
